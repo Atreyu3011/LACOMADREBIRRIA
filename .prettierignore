@@ -1,0 +1,12 @@
+dist
+dist-ssr
+public
+referencias
+node_modules
+test-results
+playwright-report
+e2e/capturas
+package-lock.json
+src/data/images.gen.json
+CLAUDE.md
+brief.md

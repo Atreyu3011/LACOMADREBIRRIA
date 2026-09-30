@@ -1,0 +1,164 @@
+/* Tipografías self-hosted (Fontsource), solo subconjunto latino y pesos usados. */
+@import '@fontsource/barlow-condensed/latin-400.css';
+@import '@fontsource/barlow-condensed/latin-500.css';
+@import '@fontsource/barlow-condensed/latin-600.css';
+@import '@fontsource/barlow-condensed/latin-600-italic.css';
+@import '@fontsource/bebas-neue/latin-400.css';
+@import '@fontsource/anton/latin-400.css';
+@import '@fontsource/kaushan-script/latin-400.css';
+@import '@fontsource/caveat-brush/latin-400.css';
+
+@import 'tailwindcss';
+
+/*
+ * Tokens de marca. Se reinicia la paleta de Tailwind para que solo existan los colores
+ * de La Comadre (bg-orange, text-ink, border-wood…).
+ *
+ * Contraste (WCAG AA):
+ *  - Texto blanco pequeño: solo sobre ember (5.4:1) o brick (5.3:1).
+ *  - orange-deep con blanco (4.2:1): solo texto grande (24 px, o 19 px en negritas).
+ *  - orange con blanco (2.9:1): nunca para texto; con ink sí (5.9:1).
+ *  - Script sobre crema: orange-deep (3.5:1, texto grande), nunca orange.
+ *  - lime: solo con texto ink.
+ */
+@theme {
+  --color-*: initial;
+  --color-white: #ffffff;
+  --color-orange: #e67a14;
+  --color-orange-deep: #d4531a;
+  --color-ember: #b8441a;
+  --color-brick: #c23b1a;
+  --color-cream: #f0ece5;
+  --color-cream-deep: #e4ddd2;
+  --color-ink: #1c1a18;
+  --color-ink-soft: #4a4540;
+  --color-wood: #6b4226;
+  --color-lime: #9bc53d;
+  /* Degradado del sello "30 Años" (solo para el sello; no usar para texto). */
+  --color-flame: #f06a28;
+  --color-flame-deep: #e4521e;
+
+  --font-*: initial;
+  --font-sans: 'Barlow Condensed', 'Arial Narrow', 'Roboto Condensed', system-ui, sans-serif;
+  --font-display: 'Bebas Neue', 'Oswald', 'Arial Narrow', sans-serif;
+  --font-impact: 'Anton', Impact, 'Arial Narrow', sans-serif;
+  --font-script: 'Kaushan Script', 'Brush Script MT', cursive;
+  --font-brush: 'Caveat Brush', 'Segoe Print', cursive;
+
+  /* Escala fluida de 360 px a 1440 px. */
+  --text-display: clamp(2.75rem, 1.67rem + 4.81vw, 6rem);
+  --text-display--line-height: 0.92;
+  --text-script: clamp(2.125rem, 1.33rem + 3.52vw, 4.5rem);
+  --text-script--line-height: 1.05;
+  --text-section: clamp(2.5rem, 2rem + 2.22vw, 4rem);
+  --text-section--line-height: 1;
+  --text-dish: clamp(1.875rem, 1.58rem + 1.3vw, 2.75rem);
+  --text-dish--line-height: 1;
+  --text-item: clamp(1.375rem, 1.25rem + 0.56vw, 1.75rem);
+  --text-item--line-height: 1.05;
+  --text-body: clamp(1.0625rem, 1.02rem + 0.19vw, 1.1875rem);
+  --text-body--line-height: 1.45;
+  --text-eyebrow: 0.875rem;
+  --text-eyebrow--line-height: 1.2;
+  --text-eyebrow--letter-spacing: 0.12em;
+
+  --header-h: 4rem;
+  --header-h-lg: 4.75rem;
+
+  --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@layer base {
+  html {
+    scroll-padding-top: calc(var(--header-h) + 0.5rem);
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  @media (min-width: 64rem) {
+    html {
+      scroll-padding-top: calc(var(--header-h-lg) + 0.5rem);
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  body {
+    @apply bg-cream font-sans text-body text-ink antialiased;
+    font-feature-settings: 'kern';
+  }
+
+  /* Foco visible y consistente en toda la página. */
+  :focus-visible {
+    outline: 3px solid var(--color-ember);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background: var(--color-orange);
+    color: var(--color-ink);
+  }
+}
+
+@layer utilities {
+  /* Precios alineados en columnas. */
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Carruseles y chips con scroll horizontal sin barra visible. */
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /*
+   * Foto histórica: sepia ligero + grano, sin "restaurar" de más.
+   * Se aplica al contenedor; el grano va en ::after encima de la imagen.
+   */
+  .vintage {
+    position: relative;
+    isolation: isolate;
+  }
+  .vintage img {
+    filter: sepia(0.35) saturate(0.85) contrast(1.06) brightness(1.03);
+  }
+  .vintage::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    mix-blend-mode: multiply;
+    opacity: 0.22;
+  }
+
+  /* Fondo del menú: foto en escala de grises multiplicada sobre ladrillo (como el impreso). */
+  .duotone-brick {
+    filter: grayscale(1) contrast(1.15) brightness(1.05);
+    mix-blend-mode: multiply;
+  }
+
+  /* Texto script sobre foto: halo claro para que el naranja se lea sobre cualquier fondo. */
+  .script-glow {
+    text-shadow:
+      0 1px 0 rgb(255 255 255 / 0.55),
+      0 0 18px rgb(255 255 255 / 0.65);
+  }
+}
+
+/*
+ * Sin JavaScript, los elementos animados del hero se muestran en su estado final
+ * (Motion los prerenderiza en su estado inicial, invisible).
+ */
+html:not(.js) [data-anim] {
+  opacity: 1 !important;
+  transform: none !important;
+}

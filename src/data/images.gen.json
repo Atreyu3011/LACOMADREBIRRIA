@@ -1,0 +1,221 @@
+{
+  "hero-portada": {
+    "width": 1600,
+    "height": 900,
+    "widths": [
+      640,
+      1024,
+      1600
+    ],
+    "color": "#985838"
+  },
+  "taco-madrazo": {
+    "width": 1600,
+    "height": 900,
+    "widths": [
+      640,
+      1024,
+      1600
+    ],
+    "color": "#b8b8b8"
+  },
+  "taco-especial": {
+    "width": 1600,
+    "height": 900,
+    "widths": [
+      640,
+      1024,
+      1600
+    ],
+    "color": "#c8c8c8"
+  },
+  "tostada-cleopatra": {
+    "width": 1600,
+    "height": 899,
+    "widths": [
+      640,
+      1024,
+      1600
+    ],
+    "color": "#080808"
+  },
+  "tostada-cleopatra-detalle": {
+    "width": 1600,
+    "height": 900,
+    "widths": [
+      640,
+      1024,
+      1600
+    ],
+    "color": "#080808"
+  },
+  "orden-birria-completa": {
+    "width": 1600,
+    "height": 900,
+    "widths": [
+      640,
+      1024,
+      1600
+    ],
+    "color": "#080808"
+  },
+  "orden-birria-1": {
+    "width": 1600,
+    "height": 1064,
+    "widths": [
+      640,
+      1024,
+      1600
+    ],
+    "color": "#c8c8c8"
+  },
+  "orden-birria-2": {
+    "width": 1600,
+    "height": 900,
+    "widths": [
+      640,
+      1024,
+      1600
+    ],
+    "color": "#080808"
+  },
+  "orden-birria-3": {
+    "width": 1600,
+    "height": 1064,
+    "widths": [
+      640,
+      1024,
+      1600
+    ],
+    "color": "#080808"
+  },
+  "orden-birria-chile-1": {
+    "width": 1600,
+    "height": 899,
+    "widths": [
+      640,
+      1024,
+      1600
+    ],
+    "color": "#180808"
+  },
+  "orden-birria-chile-2": {
+    "width": 1600,
+    "height": 900,
+    "widths": [
+      640,
+      1024,
+      1600
+    ],
+    "color": "#b8b8b8"
+  },
+  "orden-birria-chile-3": {
+    "width": 1600,
+    "height": 900,
+    "widths": [
+      640,
+      1024,
+      1600
+    ],
+    "color": "#381808"
+  },
+  "tabla-de-birria": {
+    "width": 1600,
+    "height": 899,
+    "widths": [
+      640,
+      1024,
+      1600
+    ],
+    "color": "#b8b8b8"
+  },
+  "tacos-especiales-2": {
+    "width": 1600,
+    "height": 1064,
+    "widths": [
+      640,
+      1024,
+      1600
+    ],
+    "color": "#c8c8c8"
+  },
+  "tacos-especiales-3": {
+    "width": 1600,
+    "height": 1064,
+    "widths": [
+      640,
+      1024,
+      1600
+    ],
+    "color": "#b8b8b8"
+  },
+  "tacos-especiales-4": {
+    "width": 1600,
+    "height": 900,
+    "widths": [
+      640,
+      1024,
+      1600
+    ],
+    "color": "#989898"
+  },
+  "historia-carrito": {
+    "width": 1531,
+    "height": 840,
+    "widths": [
+      640,
+      1024,
+      1531
+    ],
+    "color": "#f8f8f8"
+  },
+  "historia-parrilla": {
+    "width": 1531,
+    "height": 840,
+    "widths": [
+      640,
+      1024,
+      1531
+    ],
+    "color": "#f8f8f8"
+  },
+  "historia-toldo": {
+    "width": 1531,
+    "height": 840,
+    "widths": [
+      640,
+      1024,
+      1531
+    ],
+    "color": "#f8f8f8"
+  },
+  "historia-puesto": {
+    "width": 1134,
+    "height": 840,
+    "widths": [
+      640,
+      1024,
+      1134
+    ],
+    "color": "#181818"
+  },
+  "historia-equipo": {
+    "width": 842,
+    "height": 840,
+    "widths": [
+      640,
+      842
+    ],
+    "color": "#181818"
+  },
+  "historia-hoy": {
+    "width": 1531,
+    "height": 840,
+    "widths": [
+      640,
+      1024,
+      1531
+    ],
+    "color": "#f8f8f8"
+  }
+}

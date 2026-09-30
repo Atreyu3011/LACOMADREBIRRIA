@@ -1,0 +1,25 @@
+# Dependencias y builds
+node_modules
+dist
+dist-ssr
+*.local
+
+# Material interno (el repositorio es público): brief, fotos y video originales.
+# El sitio solo usa las imágenes ya generadas en public/img/ (npm run images).
+referencias/
+/brief.md
+
+# Pruebas
+test-results
+playwright-report
+blob-report
+playwright/.cache
+e2e/capturas
+
+# Editor y sistema
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+Thumbs.db
+*.log
